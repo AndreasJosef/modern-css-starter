@@ -3,7 +3,6 @@
 A minimal **content-first landing page starter** built with modern CSS.  
 This project is meant as a professional baseline for learning, prototyping, or shipping lightweight pages without heavy frameworks.
 
----
 
 ## Quick start
 
@@ -18,7 +17,6 @@ npm run dev
 
 This will copy the latest version of **Modern CSS Starter** into `my-new-project` without including the Git history.
 
----
 
 ## Features
 
@@ -29,7 +27,6 @@ This will copy the latest version of **Modern CSS Starter** into `my-new-project
 * **No frameworks** — artisanal CSS, fully under your control
 * **Vite dev server** — fast hot reload, easy to extend later
 
----
 
 ## Philosophy
 
@@ -37,7 +34,6 @@ The goal is to **learn and practice CSS deeply** while having a solid baseline t
 Instead of copying utility classes or fighting a framework, you build directly with tokens and blocks.
 Design emerges from content, not the other way around.
 
----
 
 ## Project structure
 
@@ -82,7 +78,6 @@ Build for production:
 npm run build
 ```
 
----
 
 ## Example workflow
 
@@ -92,7 +87,6 @@ npm run build
 4. Adjust spacing, type, and colors via tokens
 5. Fine-tune with modifiers and container queries
 
----
 
 ## License
 
