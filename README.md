@@ -1,6 +1,7 @@
 # Modern CSS Starter
 
 A minimal **content-first landing page starter** built with modern CSS.  
+
 This project is meant as a professional baseline for learning, prototyping, or shipping lightweight pages without heavy frameworks.
 
 
