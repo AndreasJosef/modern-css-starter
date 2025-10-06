@@ -46,6 +46,9 @@
     /* Column/Row Switcher */
     --switcher-gap: var(--space-4);
     --switcher-threshold: 40rem;
-
+    --switcher-asym: 52rem;
+    --switcher-text-min: 28rem;
+    --switcher-text-max: 60ch;
+    --switcher-media-min: 22rem;
   }
 }
