@@ -1,0 +1,15 @@
+/* ==========================================================================
+   BLOCKS INDEX
+   --------------------------------------------------------------------------
+   Purpose:
+   Collects and organizes all block-level (BEM) component styles in one place.
+   Each block file should live inside /blocks/ and export only its own styles.
+   
+   How it works:
+   - This file is imported from app.css using:
+       @import "./blocks/index.css" layer(blocks);
+   - Everything here will automatically live inside the `blocks` cascade layer.
+   - Add new blocks below as your system grows.
+   ========================================================================== */
+
+@import "./hero.css";

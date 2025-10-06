@@ -1,10 +1,28 @@
-/* cascade order */
-@layer tokens, base, blocks, utilities;
+/* ==========================================================================
+   APP.CSS — Global Entry Point
+   --------------------------------------------------------------------------
+   Purpose:
+   Defines the global cascade order and imports all style layers in sequence.
+   Acts as the single CSS entry file for Vite and bundling.
 
-/* imports */
-@import url("./tokens.css") layer(tokens);
-@import url("./base.css") layer(base);
-@import url("./blocks.css") layer(blocks);
+   Layer order (from low → high specificity):
+     1. tokens     → global design values and scales
+     2. base       → resets, typography, defaults
+     3. layout     → reusable layout patterns (container, grid, stack, etc.)
+     4. blocks     → BEM components built on top of layout + tokens
+     5. utilities  → small one-off helpers or debug styles
+   ========================================================================== */
 
-/* optional utilities */
-/* @import url("./utilities.css") layer(utilities); */
+/* Declare cascade order */
+@layer tokens, base, layout, blocks, utilities;
+
+/* Import core layers */
+@import "./tokens.css" layer(tokens);
+@import "./base.css"   layer(base);
+@import "./layout.css" layer(layout);
+
+/* Import all blocks through the index (keeps imports organized) */
+@import "./blocks/index.css" layer(blocks);
+
+/* Optional: utilities, debug styles, or temporary overrides */
+/* @import "./utilities.css" layer(utilities); */

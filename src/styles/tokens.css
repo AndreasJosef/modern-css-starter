@@ -4,7 +4,7 @@
     --surface-page: #ffffff;
     --surface-card: #ffffff;
     --ink-primary: #0f172a;
-    --ink-muted:   #334155;
+    --ink-muted: #334155;
 
     /* Brand */
     --brand-600: #27547d;
@@ -12,17 +12,8 @@
     --accent-500: #26c793;
 
     /* Links */
-    --link:       var(--brand-600);
+    --link: var(--brand-600);
     --link-hover: var(--brand-500);
-
-    /* Spacing */
-    --space-1: 1rem;
-    --space-2: 2rem;
-    --gutter: clamp(1rem, 4vw, 4rem);
-
-    /* Layout */
-    --container: 72rem;
-    --hero-pad-top: clamp(1rem, 8vh, 6rem);
 
     /* Type scale (just enough) */
     --step-0: clamp(1rem, .9rem + .5vw, 1.125rem);
@@ -31,5 +22,33 @@
 
     /* Radius */
     --radius-md: .75rem;
+
+    /* Spacing Scale; use for gaps/margins */
+    --space-1: 0.5rem;
+    --space-2: 0.75rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2rem;
+    --space-6: 3rem;
+
+    /* Layout Rails: gutters + max-widths (page frame)*/
+    --gutter: clamp(1rem, 1rem + 1vw, 5rem);
+    --content-max: 64rem;
+    --nav-max: 80rem;
+    --narrow-max: 48rem;
+
+    /* Grid/Column Defaults */
+    --grid-gap: var(--space-3);
+    --grid-min: 16rem;
+    --columns-gap: var(--space-4);
+    --sidebar: 18rem;
+
+    /* Column/Row Switcher */
+    --switcher-gap: var(--space-4);
+    --switcher-threshold: 40rem;
+    --switcher-asym: 52rem;
+    --switcher-text-min: 28rem;
+    --switcher-text-max: 60ch;
+    --switcher-media-min: 22rem;
   }
 }
