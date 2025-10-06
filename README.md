@@ -4,8 +4,6 @@ A minimal **content-first landing page starter** built with modern CSS.
 
 This project gives you a professional baseline for learning, prototyping, or shipping lightweight pages without relying on heavy frameworks.
 
----
-
 ## Quick start
 
 You can start a new project in two ways:
@@ -32,7 +30,6 @@ npm run dev
 ```
 
 This copies the latest version of Modern CSS Starter into `my-new-project` without including the Git history.
-
 
 ## Features
 
