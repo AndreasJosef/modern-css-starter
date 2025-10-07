@@ -1,0 +1,8 @@
+/* Blocks Index
+   - Import all layout blocks (prefix: layout-)
+   - Import all component blocks (semantic names)
+*/
+
+@import "./layouts/layout-page.css";
+
+@import "./components/hero.css";
