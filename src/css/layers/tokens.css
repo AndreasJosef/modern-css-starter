@@ -1,7 +1,7 @@
 @layer tokens {
   :root {
     /* Surfaces & text */
-    --surface-page: #ffffff;
+    --surface-page: #fafafa;
     --surface-card: #ffffff;
     --ink-primary: #0f172a;
     --ink-muted: #334155;
@@ -33,9 +33,10 @@
 
     /* Layout Rails: gutters + max-widths (page frame)*/
     --gutter: clamp(1rem, 1rem + 1vw, 5rem);
-    --content-max: 64rem;
-    --nav-max: 80rem;
-    --narrow-max: 48rem;
+
+    --content: 64rem;
+    --content-wide: 80rem;
+    --content-narrow: 48rem;
 
     /* Grid/Column Defaults */
     --grid-gap: var(--space-3);
@@ -45,10 +46,9 @@
 
     /* Column/Row Switcher */
     --switcher-gap: var(--space-4);
-    --switcher-threshold: 40rem;
-    --switcher-asym: 52rem;
     --switcher-text-min: 28rem;
     --switcher-text-max: 60ch;
     --switcher-media-min: 22rem;
+    --switcher-media-max-single: 20rem;
   }
 }
