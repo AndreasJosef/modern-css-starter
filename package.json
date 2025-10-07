@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "new": "node tools/new-block.mjs",
+    "new:layout": "node tools/new-block.mjs layout",
+    "new:component": "node tools/new-block.mjs component"
   },
   "devDependencies": {
     "vite": "^7.1.7"

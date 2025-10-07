@@ -1,18 +1,16 @@
 # Modern CSS Starter
 
-A minimal **content-first landing page starter** built with modern CSS.  
+A minimal, **content-first starter** built with modern, semantic CSS.
+It gives you a professional baseline for **learning, prototyping, or shipping** lightweight pages — without relying on frameworks or utility chaos.
 
-This project gives you a professional baseline for learning, prototyping, or shipping lightweight pages without relying on heavy frameworks.
 
----
+## ⚡️ Quick start
 
-## Quick start
+Start a new project in two ways:
 
-You can start a new project in two ways:
-
-### Option A: GitHub template  
-1. Click **Use this template** at the top of this repo on GitHub.  
-2. Create a new repository from it.  
+### Option A — GitHub Template
+1. Click **Use this template** at the top of this repo  
+2. Create a new repository from it  
 3. Clone your new repo locally and run:
 
 ```bash
@@ -20,9 +18,7 @@ npm install
 npm run dev
 ````
 
-### Option B: Degit (one-liner)
-
-If you prefer working directly from the terminal:
+### Option B — Degit (terminal one-liner)
 
 ```bash
 npx degit AndreasJosef/modern-css-starter my-new-project
@@ -31,50 +27,54 @@ npm install
 npm run dev
 ```
 
-This copies the latest version of Modern CSS Starter into `my-new-project` without including the Git history.
+This copies the latest version without Git history.
 
 
-## Features
+## ✨ Features
 
-* **Content-first workflow** — start with semantic HTML, let design emerge from content
-* **Cascade layers** — predictable overrides (`tokens`, `base`, `blocks`, `utilities`)
-* **Design tokens** — surfaces, ink, brand colors, type scale, spacing, layout knobs
-* **Modern CSS** — custom properties, `clamp()`, Grid, Flexbox, container queries ready
-* **No frameworks** — artisanal CSS, fully under your control
-* **Vite dev server** — fast hot reload, easy to extend if needed
-
-
-## Philosophy
-
-This starter is designed to help you **learn CSS deeply** while always having a professional baseline.
-Instead of fighting a framework or copying utility classes, you work directly with:
-
-* **Tokens** for colors, type, spacing, and layout — your design “knobs”
-* **Cascade layers** for clarity and control
-* **Blocks (BEM)** so each section owns its layout and styling
-
-Design emerges naturally from the content. You don’t need a design tool to begin — the page grows from semantic HTML and small, deliberate CSS decisions.
+* **Content-first workflow** — start with semantic HTML, let layout and design emerge naturally
+* **Cascade layers** — predictable structure (`tokens`, `base`, `blocks`, `utilities`)
+* **Design tokens** — your single source of truth for colors, spacing, typography, and layout
+* **Modern CSS** — container queries, `clamp()`, logical properties, and custom properties
+* **Layout + component separation** — layout blocks handle structure, components handle visuals
+* **Utility helpers** — small, explicit overrides when you really need them
+* **Vite dev server** — instant hot reloads, easy to extend
 
 
-## Project structure
+## 🧱 CSS Architecture
 
 ```
-modern-css-starter/
-├── index.html         # semantic content structure
-├── vite.config.js     # dev server setup
-├── package.json
-└── src/
-    ├── img/           # images and assets
-    └── styles/
-        ├── app.css      # entry point with @layer order + imports
-        ├── tokens.css   # design tokens (colors, type, spacing, layout)
-        ├── base.css     # resets + accessibility baseline
-        └── blocks.css   # block/component styles (BEM)
+tokens → base → blocks → utilities
 ```
 
-## Usage
+| Layer         | Purpose                         | Examples                                            |
+| ------------- | ------------------------------- | --------------------------------------------------- |
+| **tokens**    | Global design values            | `--ink-primary`, `--space-4`, `--step-2`            |
+| **base**      | Resets & accessibility defaults | `body`, `a`, `:focus-visible`                       |
+| **blocks**    | Layout + component blocks       | `.layout-page`, `.layout-section`, `.hero`, `.card` |
+| **utilities** | Small helpers                   | `.u-flow`, `.u-center`, `.u-hidden`                 |
 
-Once you’ve cloned the repo or created a new project from it:
+> **Layout arranges. Component decorates. Utility fixes.**
+
+
+## 📂 Project structure
+
+```
+src/
+└── css/
+    ├── app.css            # Entry point for all styles (defines layer order)
+    ├── layers/
+    │   ├── tokens.css     # Design tokens (colors, type, spacing, layout)
+    │   ├── base.css       # Resets, accessibility, defaults
+    │   └── utilities.css  # Small helper utilities
+    └── blocks/
+        ├── layouts/       # Page-level and structural blocks
+        ├── components/    # Visual and semantic components
+        └── index.css      # Imports all layouts and components
+```
+
+
+## 🚀 Usage
 
 Install dependencies:
 
@@ -88,38 +88,66 @@ Run the dev server (auto reloads on save):
 npm run dev
 ```
 
-Build for production (outputs to `/dist`):
+Build for production:
 
 ```bash
 npm run build
 ```
 
-Preview the production build locally:
+Preview locally:
 
 ```bash
 npm run preview
 ```
 
-## Example workflow
 
-1. Write semantic HTML in `index.html`
-2. Add or tweak tokens in `src/styles/tokens.css`
-3. Style blocks in `src/styles/blocks.css` (BEM naming)
-4. Adjust spacing, type, and colors via tokens
-5. Fine-tune with modifiers and container queries
+## ⚙️ Create new blocks
+
+You can generate new **layout** or **component** blocks from the command line using the built-in generator script.
+
+### Example
+
+```bash
+npm run new layout section
+npm run new component card
+```
+
+This copies the corresponding boilerplate into:
+
+* Layouts → `src/css/blocks/layouts/`
+* Components → `src/css/blocks/components/`
+
+You’ll then import it manually into `src/css/blocks/index.css`:
+
+```css
+@import "./layouts/layout-section.css";
+@import "./components/card.css";
+```
 
 
-## Why this instead of a framework?
+## 💡 Philosophy
 
-This starter is intentionally lightweight. It doesn’t include Bootstrap, Tailwind, or any other framework — so you can:
+Modern CSS Starter helps you **learn CSS by building**, not by memorizing utility classes.
 
-* **Learn CSS fundamentals** instead of memorizing utility classes
-* Build a **design system from scratch** with tokens and layers
-* Understand **how modern CSS really works** (cascade, fluid type, grid, container queries)
-* Move faster later when you do use a framework, because you know what’s happening underneath
+It’s built around a few key ideas:
+
+1. **Tokens** are your design API
+2. **Base** sets global defaults
+3. **Blocks** are your building units
+4. **Utils** let you adjust quickly
+5. **Design emerges from content** — not the other way around
+
+Everything is plain CSS — layered, semantic, and understandable at a glance.
 
 
-## License
+## 🧭 Next steps
+
+* Create your first block (`layout-section` or `hero`)
+* Iterate, learn, and share!
+
+## 🪪 License
 
 MIT — free to use and adapt.
+If you share or remix it, credit is appreciated but not required. 💛
+
 
