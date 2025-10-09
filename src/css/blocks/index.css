@@ -4,5 +4,6 @@
 */
 
 @import "./layouts/layout-page.css";
+@import "./layouts/layout-section.css";
 
 @import "./components/hero.css";
