@@ -26,7 +26,6 @@
   /* Styles */
   background: var(--hero-bg);
   color: var(--hero-color);
-  padding: var(--space-5);
 }
 
 :where(.hero__text) {

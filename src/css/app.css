@@ -20,14 +20,14 @@
    ========================================================================== */
 
 /* Declare cascade order */
-@layer tokens, base, blocks, utilities;
+@layer tokens, base, components, utilities;
 
 /* Import core layers */
 @import "./layers/tokens.css" layer(tokens);
 @import "./layers/base.css"   layer(base);
 
 /* Import all blocks via index to keep imports organized */
-@import "./blocks/index.css"  layer(blocks);
+@import "./layers/components.css"  layer(components);
 
 /* Import utilities for quick fixes and explicit overrides */
 @import "./layers/utilities.css" layer(utilities);
